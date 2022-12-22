@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import nophoto from '../../assets/images/nophoto.jpg';
 import CategoryService from "../../services/categoryService";
 import ProductService from '../../services/productService';
+import Helper from "../../Helper/Helper";
 import Spinner from "../Spinner/Spinner";
 function ProductList() {
     const [state, setState] = useState({
@@ -88,8 +89,7 @@ function ProductList() {
                                                 <div className="card-text">
                                                     <div className="d-flex justify-content-between">
                                                         <span>{product.sizes.join(" | ")}</span>
-                                                        <span>{product.price}</span>
-                                                        {/* <span className="text-success">{Helper.formatCurrency(product.price)}</span> */}
+                                                        <span className="text-success">{Helper.formatCurrency(product.price)}</span>
                                                     </div>
                                                     <p>{product.title}</p>
                                                 </div>
