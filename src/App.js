@@ -1,11 +1,15 @@
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Narbav from './components/Navbar/Navbar';
-import navbar from './components/Navbar/Navbar';
+import Navbar from './components/Navbar/Navbar';
+import ProductList from './components/ProductList/ProductList';
 
 function App() {
   return (
     <>
-      <Narbav/>
+      <Navbar/>
+      <Routes>
+        <Route path='/fake-store' element={<ProductList/>}/>
+      </Routes>
     </>
   );
 }
